@@ -19,50 +19,38 @@
 <body>
     <div class="row bg-info text-white">
         <img class="col-md-2 col-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJjYHroaKqYDoChsKLC6YmS4NegxEcl7ycKaW3iK7XVxO_6ipv&usqp=CAU" width="25" height="85">
-        <h1 style="padding-top: 10px ;" class="col-md-8 col-6 text-center">Registration Page</h1>
+        <h1 style="padding-top: 10px ;" class="col-md-8 col-6 text-center">Sign in</h1>
         <button type="button" class="col-md-2 col-2 close">&times;</button>
     </div>
         <br>
         <br>
-        <form onsubmit="register();this.reset();">
-        <div class="row">
-            <div class="col-md-4 col-1">
-                </div>
-        <div class="col-md-4 form-group col-9">
-            <input type="text" placeholder="Name" class="form-control" id="name" required>
-        </div>
-        </div>
     <div class="row">
         <div class="col-md-4 col-1">
             </div>
     <div class="col-md-4 form-group col-9">
-        <input type="text" placeholder="mail@example.com" class="form-control" id="usr" required>
+        <input type="text" placeholder="mail@example.com" class="form-control" id="usr">
     </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTVyLwzEAtw7QWkfXrwVxiGqTx2AALHOlQLVMj9JEtgAVBxnYzz&usqp=CAU" width="30" height="30">
 </div>
 <div class="row">
     <div class="col-md-4 col-1">
         </div>
 <div class="col-md-4 form-group col-9">
-    <input type="text" placeholder="Mobile Number" class="form-control" id="ph" required>
+    <input type="text" placeholder="password" class="form-control" id="usr">
 </div>
-
-</div>
-<div class="row">
-    <div class="col-md-4 col-1">
-        </div>
-<div class="col-md-4 form-group col-9">
-    <input type="text" placeholder="Date Of Birth(DD/MM/YYYY)" class="form-control" id="dt" required>
-</div>
-
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQAxwShZha02AFSCaiBLWgmYp-URXfeimXBkGnWWDK8hOVqVGmg&usqp=CAU" width="30" height="30">
 </div>
 <div class="row">
     <div class="col-md-4 col-1">
     </div>
-<button type="submit" class="col-md-4 col-9 btn btn-info text-white">REGISTER</button>
+<button type="button" class="col-md-4 col-9 btn btn-info text-white">SIGN IN</button>
       </div>
-    </div>
-</form>
-    <br>
+<div class="row">
+    <div class="col-md-4 col-1"></div>
+    <div class="col-md-3 col-7">Forgot your password?</div>
+    <div >Register!</div>
+</div>
+<br>
 <div style="width: 100%; height: 20px; border-bottom: 1px solid grey; text-align: center">
     <span style="font-size: 20px; background-color: #F3F5F6; padding: 0 10px;">
       OR 
@@ -85,41 +73,5 @@
         <div class="col-md-4 col-1"></div>
     <button type="button" style="background-color: #aeea00" class="col-md-4 col-9 btn text-white"> < EPAM LOGIN > </EPAM></button>
           </div>
-<script>
-    var em="";
-    function register(){
-   
-        emailField=document.getElementById("usr");
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-
-        if (reg.test(emailField.value) == false) 
-        {
-            em+=('Please enter valid Email Address\n');
-            
-        }
-    txtMobId=document.getElementById("ph");
-    var mob = /^[1-9]{1}[0-9]{9}$/;
-    if (mob.test(txtMobId.value) == false) {
-        em+=("Please enter valid mobile number\n");
-      
-    }
-    var dob = document.getElementById("dt").value;
-    var pattern = /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
-    if (dob == null || dob == "" || !pattern.test(dob)) {
-        em+=("Please enter valid date of birth\n");
-      
-    }
-       if(em==""){
-       alert("Registered successfully");
-       return true;
-    }
-       else{
-           alert(em);
-           return false;
-       }
-     
-
-    }
-</script>
 </body>
 </html>
